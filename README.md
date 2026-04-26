@@ -146,3 +146,8 @@ For a new project based on this template:
 ## License
 
 This template is distributed under GPLv3.
+
+## TODO
+
+- Add screenshots of theme in readme
+- Use Github actions to build releases
