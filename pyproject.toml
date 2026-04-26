@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyqt6-app-template"
+version = "0.1.0"
+description = "Reusable PyQt6 GUI template with qt-themes support."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "crowdedmovie" }]
+license = { text = "GPLv3" }
+dependencies = [
+    "PyQt6>=6.7,<7",
+    "qtpy>=2.4,<3",
+    "qt-themes>=0.4.0",
+    "qt-material-icons>=0.5.0",
+]
+
+[project.optional-dependencies]
+build = [
+    "pyinstaller>=6.0",
+]
+
+[project.scripts]
+pyqt6-app-template = "gui_template.app:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["gui_template*"]
+
+[tool.setuptools.package-data]
+gui_template = ["ui/*.ui", "assets/*.png"]
